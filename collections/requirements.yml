@@ -1,0 +1,5 @@
+
+---
+roles:
+  - name: crivetimihai.vsftpd
+    source: https://galaxy.ansible.com
