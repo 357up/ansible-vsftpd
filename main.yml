@@ -5,7 +5,7 @@
 
   tasks:
     - name: vsftpd is configured
-      crivetimihai.vsftpd:
+      vsftpd:
         vars:
           vsftpd_enable_service: true
           vsftpd_copy_templates: true
