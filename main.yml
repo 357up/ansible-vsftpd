@@ -2,10 +2,11 @@
 - name: Install vsftpd on "{{ hosts }}"
   hosts:
     - "{{ hosts }}"
-
   tasks:
     - name: vsftpd is configured
-      vsftpd:
+      import_role:
+        name: crivetimihai.vsftpd
+      vars:
         vsftpd_enable_service: true
         vsftpd_copy_templates: true
         vsftpd_firewall_configure: true
@@ -19,4 +20,4 @@
           - name: ftpd_full_access
             state: true
             persistent: true
-        tags: vsftpd
+      tags: vsftpd
